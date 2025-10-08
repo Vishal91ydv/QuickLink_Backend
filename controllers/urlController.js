@@ -13,7 +13,7 @@ function isValidUrl(urlString) {
 
 const createShortUrl = async (req, res) => {
   const { longUrl } = req.body;
-  const baseUrl = process.env.BASE_URL;
+  const baseUrl = 'https://quicklink-backend-gy3r.onrender.com';
 
   if (!longUrl) {
     return res.status(400).json({ message: 'longUrl is required' });
