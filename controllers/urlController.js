@@ -13,7 +13,7 @@ function isValidUrl(urlString) {
 
 const createShortUrl = async (req, res) => {
   const { longUrl } = req.body;
-  const baseUrl = process.env.BASE_URL || 'http://localhost:5000';
+  const baseUrl = process.env.BASE_URL;
 
   if (!longUrl) {
     return res.status(400).json({ message: 'longUrl is required' });
